@@ -1,0 +1,118 @@
+<html>
+<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Tranaitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<title>본격! 게시판 - 게시글 리스트</title>
+</head>
+</style>
+<script type="text/javascript">
+
+function timer () { 
+
+	 var date = new Date(); 
+
+	 var hour = date.getHours(); 
+
+	 var ampm = ( hour  < 12 || hour == 24 ) ? " A.M." : " P.M."; 
+
+
+	      hour = hour % 12 || 12; 
+
+
+	 var minute = date.getMinutes(); 
+	      minute = ( minute > 9 ) ? minute : "0" + minute; 
+
+	 var second = date.getSeconds(); 
+	      second = ( second > 9 ) ? second : "0" + second; 
+
+	 var millisec = date.getMilliseconds(); 
+	      millisec = ( millisec > 99 ) ? millisec : ( millisec > 9 ) ? "0" + millisec : "00" + millisec; 
+
+
+
+	 var timeString = hour + ":" + minute + ":" + second + ampm; 
+	 // 또는,  var timeString = hour + ":" + minute + ":" + second + ":" + millisec + ampm; 
+
+
+	 var year = date.getFullYear(); 
+	 var month = date.getMonth() + 1; 
+	 var day = date.getDate(); 
+
+
+	 var arrayWeek = [ "Sun. " , "Mon. " , "Tue. " , "Wed. " , "Thur. " , "Fri. " , "Sat. " ]; 
+	 // 또는, var arrayWeek = [ "일. " , "월. " , "화. " , "수. " , "목. " , "금. " , "토. " ]; 
+
+
+	 var week = date.getDay(); 
+	       week = arrayWeek [ week ]; 
+
+
+	 var dateString = year + ". " + month + ". " + day + ". " + week; 
+
+
+	 return  dateString + timeString; 
+} 
+</script>
+</head>
+ 
+ 
+<body>
+
+<p id="realTimer"></p>
+
+
+<script type="text/javascript">
+
+var tag = document.getElementById( "realTimer" ); 
+
+     tag.innerHTML = timer(); 
+
+setInterval ( function() { tag.innerHTML = timer(); } , 10 ); 
+
+</script>
+<body>
+<body background="HTML.png">
+<h1>게시글 리스트</h1>
+            <table>
+               <tr>
+                     <th>번호</th>
+                     <th>제목</th>
+                     <th>작성자</th>
+                     <th>날짜</th>
+                     <th>조회수</th>
+               </tr>
+                <tr>
+                     <td>1</td>
+                     <td>페이지</td>
+                     <td>복구 완료!</td>
+                     <td>오늘</td>
+                     <td>100000</td>
+                </tr>
+               <tr>
+                     <td>2</td>
+                     <td>본격!</td>
+                     <td>게시판 짜기</td>
+                     <td>오늘</td>
+                     <td>100000</td>
+                </tr>
+                     <td>3</td>
+                     <td>index.html</td>
+                     <td>작업중</td>
+                     <td>오늘</td>
+                     <td>100000</td>
+                </tr>    
+                <tr>
+                     <td>4</td>
+                     <td>로그인 스크립트</td>
+                     <td>삭제되었음.</td>
+                     <td>오늘</td>
+                     <td>100000</td>
+                </tr>
+              </table>
+<a href="write.html">글쓰기</a>
+<br><a href="update.html">업데이트 내용 확인하기</a></br>
+<br><a href="time.html">실시간 시계 확인하기(현재 이 문서의 타이머의 원본 소스)</a></br>
+<hr>
+<h5>비밀번호 입력 스크립트는 index.html (현재 파일)을 제외한 다른 파일(write.html)에만 구현되어 있습니다.</h5>
+<h6>글쓰기 페이지에 들어가면 내용 작성은 가능하지만 아직 글이 등록되는건 미구현입니다. (구현을 할려면 아직 한참 멀었습니다;; 제가 더 배우도록 하겠습니다.)</h6>
+</body>
+</html>
