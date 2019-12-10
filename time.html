@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>윈도우 7 공식 지원 종료 타이머</title>
+<link rel="shortcut icon" type="image?x-icon" href="윈도우 메뉴.PNG">
+<h1>시간이 얼마 남지 않았습니다. 그런데 아직까지도 보안성이 낮은 구식의 윈도우 7을 사용하시겠습니까?</h1>
+<img src="윈도우7로고.jfif" title="윈도우 7">
+<img src="윈도우7.PNG" title="곧 있으면 지원 종료될 윈도우 7">
+<h1>시간이 얼마 남지 않았습니다. 그런데 아직까지도 보안성이 낮은 구식의 윈도우 7을 사용하시겠습니까?</h1>
+<br><b><ins>만약 이 사이트를 보고 계시다면 지금 윈도우 7을 사용중인 사람들에게 널리 알리세요!</br></b></ins>
+<br><b><ins>아직까지도 윈도우 7을 사용하고 계시다면, 지금 당장 바로 윈도우 10으로 업그레이드 하시기 바랍니다!</br></b></ins>
+<br><b><ins>윈도우 10의 보급률이 높아진 2019년 현재, 아직까지도 윈도우 7을 사용중인 곳이 많습니다. 직장, 학교, 은행 등 아직까지도 구식의 윈도우 7 운영체제가 곳곳에서 사용중입니다. 이렇게 보안에 취약한 윈도우 7을 아직도 사용하시겠습니까? 심지어 은행에서는 윈도우 XP를 아직까지도 사용중인 곳이 있다고 합니다.
+<br><b><ins>윈도우 XP를 아직까지도 사용하고 계시다면, 그것은 당신 컴퓨터의 보안을 "윈도우 XP"라는 구식 운영체제와 맞바꾼 것입니다.</br></b></ins>
+<br><b><ins>아직 윈도우 7을 사용중이시라면, 그리고 윈도우 10으로 업그레이드하라는 문구가 뜨면 그냥 무시하고 창을 X를 눌러 없애지만 말고 업그레이드 하시기 바랍니다!!! 마이크로소프트도 윈도우 7의 업그레이드를 위해서 많은 노력을 기울이고 있습니다. 귀찮다는 이유로, 알림이 불편하다는 이유로 안하는 것과 당신의 컴퓨터의 보안과 어느것을 고르시겠습니까?
+   <a href="https://support.microsoft.com/ko-kr/help/4057281/windows-7-support-will-end-on-january-14-2020" target="_blank">
+        윈도우 7 지원 종료에 대한 내용 보기
+    </a><br/><br/>
+<hr>
+<b><font color="gray" size="6">2019년</font></b>
+<h1 id="clock" style="color:gray;">00:00</h1>
+
+
+<script>
+
+
+var clockTarget = document.getElementById("clock");
+
+
+function clock() {
+    var date = new Date();
+
+    // date Object를 받아오고 
+    var month = date.getMonth();
+
+    // 달을 받아옵니다 
+    var clockDate = date.getDate();
+
+    // 몇일인지 받아옵니다 
+    var day = date.getDay();
+
+    // 요일을 받아옵니다. 
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+    // 요일은 숫자형태로 리턴되기때문에 미리 배열을 만듭니다. 
+    var hours = date.getHours();
+
+    // 시간을 받아오고 
+    var minutes = date.getMinutes();
+
+    // 분도 받아옵니다.
+    var seconds = date.getSeconds();
+
+    // 초까지 받아온후 
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +
+
+    `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+
+    // 월은 0부터 1월이기때문에 +1일을 해주고 
+
+    // 시간 분 초는 한자리수이면 시계가 어색해보일까봐 10보다 작으면 앞에0을 붙혀주는 작업을 3항연산으로 했습니다. 
+}
+
+
+
+function init() {
+
+clock();
+
+// 최초에 함수를 한번 실행시켜주고 
+setInterval(clock, 1000);
+
+// setInterval이라는 함수로 매초마다 실행을 해줍니다.
+
+// setInterval은 첫번째 파라메터는 함수이고 두번째는 시간인데 밀리초단위로 받습니다. 1000 = 1초 
+
+}
+
+
+
+init();
+
+
+</script>
+<script>
+ CountDownTimer('01/01/2020', 'countdown');
+    CountDownTimer('01/14/2020 00:00 AM', 'newcountdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + '일 ';
+            document.getElementById(id).innerHTML += hours + '시간 ';
+            document.getElementById(id).innerHTML += minutes + '분 ';
+            document.getElementById(id).innerHTML += seconds + '초';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+</script>
+<h2>2020년 새해까지 남은 시간</h2>
+<br>2020년 1월 1일까지 <div id="countdown"></div> 남았습니다.<br>
+<h2>2020년 1월 14일 윈도우 7 지원 공식 종료까지 남은 시간</h2>
+<br>2020년 1월 14일까지 <div id="newcountdown"></div> 남았습니다.<br>
+<h2>모든 사진의 출처는 "나무위키"임을 밝힙니다.</h2>
+   <a href="https://namu.wiki/w/나무위키:대문" target="_blank">
+        나무위키
+    </a><br/><br/>
+</body>
+</html>
