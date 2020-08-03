@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove items</title>
+    <script>
+        function removeItem(item) {
+            document.getElementById("list").removeChild(item);
+        }
+    </script>
+</head>
+<body>
+    <div id="list">
+        Security to protect Mr Volkov
+    <div onclick="removeItem(this);">
+        Woolly socks
+    </div>
+</body>
+</html>
