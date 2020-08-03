@@ -1,2 +1,6 @@
-[diamond.jpg](https://getcodingkids.com/wp-content/uploads/2016/05/diamond.jpg)<br/>
-[Team.jpg](https://getcodingkids.com/wp-content/uploads/2016/05/TeamPhoto.jpg)
+# (미션 2) 암호 입력 웹페이지를 제공하라!
+1. 하이퍼링크로 웹페이지와 웹페이지 연결하기
+2. 자바스크립트 소개
+3. 자바스크립트 코드 동작 방식 설명
+4. 자바스크립트로 웹기반 프로그램 작성하기
+4. 암호 입력 기능으로 웹페이지 보호하기
