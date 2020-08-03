@@ -1,2 +1,6 @@
-[diamond.jpg](https://getcodingkids.com/wp-content/uploads/2016/05/diamond.jpg)<br/>
-[Team.jpg](https://getcodingkids.com/wp-content/uploads/2016/05/TeamPhoto.jpg)
+# (미션 1) 웹페이지를 만들어라!
+1. <b>HTML 소개<b>
+2. <b>HTML 코드 동작 방식 설명<b>
+3. <b>HTML로 간단한 웹페이지 만들기<b>
+4. <b>웹페이지에 글과 그림 넣기<b>
+5. <b>CSS로 웹페이지 구성하고 장식하기<b>
